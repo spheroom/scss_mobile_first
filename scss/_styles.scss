@@ -183,28 +183,16 @@ ul.nav {
   strong {
     display: block;
     color: #fff;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.6px;
     font-weight: 700;
-    margin-bottom: 7px;
+    @include intro-strong(18px, 0.6px, 22px, 7px);
     @include media(">=640px") {
-      font-size: 40px;
-      letter-spacing: -1.3px;
-      line-height: 43px;
-      margin-bottom: 32px;
+      @include intro-strong(40px, -1.3px, 43px, 32px);
     }
     @include media(">=980px") {
-      font-size: 62px;
-      letter-spacing: -2.3px;
-      line-height: 64px;
-      margin-bottom: 56px;
+      @include intro-strong(62px, -2.3px, 64px, 56px);
     }
     @include media(">=1024px") {
-      font-size: 62px;
-      letter-spacing: -0.6px;
-      line-height: 66px;
-      margin-bottom: 59px;
+      @include intro-strong(62px, -0.6px, 66px, 59px);
     }
   }
   a {
