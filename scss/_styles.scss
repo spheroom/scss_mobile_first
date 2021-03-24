@@ -168,21 +168,17 @@ ul.nav {
 // ======================HEADER-END==========================
 // ======================INTRO===============================
 .intro {
-  height: 120px;
   max-width: 100%;
-  padding: 54px 0 0 26px;
   background-color: $intro_color;
+  @include intro(120px, 54px 0 0 26px);
   @include media(">=640px") {
-    height: 242px;
-    padding: 107px 0 0 52px;
+    @include intro(242px, 107px 0 0 52px);
   }
   @include media(">=980px") {
-    height: 369px;
-    padding: 179px 0 0 76px;
+    @include intro(369px, 179px 0 0 76px);
   }
   @include media(">=1024px") {
-    height: 369px;
-    padding: 193px 0 0 80px;
+    @include intro(383px, 193px 0 0 80px);
   }
   strong {
     display: block;
@@ -215,8 +211,8 @@ ul.nav {
     position: relative;
     text-decoration: none;
     color: #fff;
-    font-size: 12px;
-    letter-spacing: 0.1px;
+    font-size: 11px;
+    letter-spacing: 0.3px;
     font-weight: 200;
     @include media(">=640px") {
       font-size: 20px;
