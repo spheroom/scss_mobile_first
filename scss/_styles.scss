@@ -1,3 +1,8 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 body {
   font: 18px/20px "Montserrat", sans-serif;
   font-weight: 400;
@@ -36,7 +41,7 @@ main {
     height: 74px;
   }
   @include media(">=980px") {
-    height: 98px;
+    height: 97px;
     width: 980px;
   }
   @include media(">=1024px") {
@@ -170,15 +175,15 @@ ul.nav {
 .intro {
   max-width: 100%;
   background-color: $intro_color;
-  @include intro(120px, 54px 0 0 26px);
+  @include intro(175px, 54px 0 0 26px);
   @include media(">=640px") {
-    @include intro(242px, 107px 0 0 52px);
+    @include intro(348px, 107px 0 0 52px);
   }
   @include media(">=980px") {
-    @include intro(369px, 179px 0 0 76px);
+    @include intro(548px, 179px 0 0 76px);
   }
   @include media(">=1024px") {
-    @include intro(383px, 193px 0 0 80px);
+    @include intro(577px, 193px 0 0 80px);
   }
   strong {
     display: block;
@@ -199,50 +204,30 @@ ul.nav {
     position: relative;
     text-decoration: none;
     color: #fff;
-    font-size: 11px;
-    letter-spacing: 0.3px;
-    font-weight: 200;
+    @include intro-a(11px, 200, 0.3px);
     @include media(">=640px") {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      @include intro-a(20px, 700, 1px);
     }
     @include media(">=980px") {
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      @include intro-a(32px, 700, 1px);
     }
     @include media(">=1024px") {
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: 1.6px;
+      @include intro-a(32px, 700, 1.6px);
     }
   }
-  a span {
+  a span:after {
+    content: "\e900";
     position: absolute;
-    top: -15px;
-    left: 212px;
-    background: url("../img/arrow.png") no-repeat 10% 44%;
-    background-size: 63%;
-    width: 33px;
-    height: 54px;
+    color: #fff;
+    @include intro-span(4px, 219px, 9px);
     @include media(">=640px") {
-      top: -12px;
-      left: 425px;
-      background: url(../img/arrow.png) no-repeat 10% 44%;
-      background-size: 105%;
+      @include intro-span(4px, 439px, 17px);
     }
     @include media(">=980px") {
-      top: -6px;
-      left: 658px;
-      background: url(../img/arrow.png) no-repeat 10% 44%;
-      background-size: 167%;
+      @include intro-span(8px, 676px, 25px);
     }
     @include media(">=1024px") {
-      top: -6px;
-      left: 692px;
-      background: url(../img/arrow.png) no-repeat 35% 44%;
-      background-size: 183%;
+      @include intro-span(9px, 705px, 26px);
     }
   }
 }

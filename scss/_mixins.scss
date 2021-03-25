@@ -1,10 +1,3 @@
-@mixin btn($bg, $color, $radius, $fs) {
-  color: $color;
-  font-size: $fs;
-  background: $bg;
-  border-radius: $radius;
-  padding: 10px;
-}
 @mixin intro($h, $pad) {
   height: $h;
   padding: $pad;
@@ -15,8 +8,13 @@
   line-height: $lh;
   margin-bottom: $mb;
 }
-@mixin intro_a($fs, $fw, $ls) {
+@mixin intro-a($fs, $fw, $ls) {
   font-size: $fs;
   font-weight: $fw;
   letter-spacing: $ls;
+}
+@mixin intro-span($top, $left, $fs) {
+  top: $top;
+  left: $left;
+  font-size: $fs;
 }
