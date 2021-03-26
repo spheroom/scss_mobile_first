@@ -174,7 +174,11 @@ ul.nav {
 // ======================INTRO===============================
 .intro {
   max-width: 100%;
-  background-color: $intro_color;
+  background: linear-gradient(
+    135deg,
+    rgba(25, 180, 198, 1) 0%,
+    rgba(7, 138, 164, 1) 100%
+  );
   @include intro(175px, 54px 0 0 26px);
   @include media(">=640px") {
     @include intro(348px, 107px 0 0 52px);
