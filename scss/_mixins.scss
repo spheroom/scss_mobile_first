@@ -18,3 +18,13 @@
   left: $left;
   font-size: $fs;
 }
+@mixin text-holder-arrow($top, $left, $fs) {
+  top: $top;
+  left: $left;
+  font-size: $fs;
+}
+@mixin text-holder-p($pl, $fs, $ls) {
+  padding-left: $pl;
+  font-size: $fs;
+  letter-spacing: $ls;
+}
