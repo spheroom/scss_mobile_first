@@ -29,6 +29,11 @@ main {
     display: contents;
   }
 }
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 // ==========================Header==================
 .top-header {
   position: relative;
@@ -63,6 +68,7 @@ main {
   height: 37px;
   background-color: $burger_span_color;
   z-index: 12;
+  cursor: pointer;
   @include media(">=640px") {
     width: 82px;
     height: 74px;
@@ -168,6 +174,9 @@ ul.nav {
     &:hover {
       text-decoration: underline;
     }
+  }
+  .active {
+    text-decoration: underline;
   }
 }
 // ======================HEADER-END==========================
@@ -302,21 +311,133 @@ ul.nav {
   }
 }
 // ======================TEXT-HOLDER-END=====================
+// ======================GALLERY=============================
+.gallery {
+  @include media(">=980px") {
+    height: 282px;
+    overflow: hidden;
+  }
+  @include media(">=1024px") {
+    height: 294px;
+  }
+  a span {
+    display: block;
+    position: relative;
+    height: 273px;
+    width: 100%;
+    background-color: $Blue-Gem;
+    @include media(">=640px") {
+      height: 549px;
+    }
+    @include media(">=980px") {
+      height: 100%;
+      width: 33.333%;
+      float: left;
+    }
+    &:after {
+      content: "\e900";
+      color: $white;
+      position: absolute;
+      top: calc(50% - 18px);
+      left: calc(50% - 10px);
+      font-size: 27px;
+      @include media(">=640px") {
+        top: calc(50% - 36px);
+        left: calc(50% - 19px);
+        font-size: 54px;
+      }
+      @include media(">=980px") {
+        top: calc(50% - 20px);
+        left: calc(50% - 9px);
+        font-size: 27px;
+      }
+      @include media(">=1024px") {
+        top: calc(50% - 20px);
+        left: calc(50% - 9px);
+        font-size: 27px;
+      }
+    }
+  }
+  picture img {
+    display: block;
+    width: 100%;
+    @include media(">=980px") {
+      width: 33.333%;
+      float: left;
+    }
+  }
+}
+// ======================GALLERY-END=========================
 .content {
+  position: relative;
   background: $headerLink;
   max-width: 100%;
-  padding: 35px;
+  padding: 31px 35px 35px;
+  @include media(">=640px") {
+    padding: 74px 76px 35px 74px;
+  }
+  @include media(">=980px") {
+    padding: 117px 78px 35px;
+    columns: 370px 2;
+    column-gap: 74px;
+  }
+  @include media(">=1024px") {
+    padding: 101px 83px 35px;
+    column-gap: 60px;
+  }
+  h1 {
+    color: $Blue-Chill;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    margin-bottom: 17px;
+    @include media(">=640px") {
+      font-size: 28px;
+      letter-spacing: 0.4px;
+      margin-bottom: 48px;
+    }
+    @include media(">=980px") {
+      position: absolute;
+      top: 70px;
+      left: 74px;
+    }
+    @include media(">=1024px") {
+      position: absolute;
+      top: 55px;
+      left: 78px;
+      font-size: 27px;
+      letter-spacing: 1.1px;
+    }
+  }
   p {
     color: $textColor;
     font-size: 14px;
     margin-bottom: 28px;
-    text-align: justify;
-    @include media(">=980px") {
-      font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+    @include media(">=640px") {
+      font-size: 22px;
+      margin-bottom: 45px;
+      line-height: 44px;
+      letter-spacing: -0.5px;
+      font-weight: 700;
     }
-  }
-  @include media(">=980px") {
-    columns: 370px 2;
-    column-gap: 74px;
+    @include media(">=980px") {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: -0.7px;
+      line-height: 26px;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+    @include media(">=1024px") {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: -0.7px;
+      line-height: 26px;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
   }
 }

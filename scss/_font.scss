@@ -9,7 +9,8 @@
 [class^="icon-"],
 [class*=" icon-"],
 .intro a span:after,
-.text-holder a span:after {
+.text-holder a span:after,
+.gallery a span:after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: never;
