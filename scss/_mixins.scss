@@ -28,3 +28,10 @@
   font-size: $fs;
   letter-spacing: $ls;
 }
+@mixin content-p($fs, $fw, $lh, $ls, $mb) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+  margin-bottom: $mb;
+}
