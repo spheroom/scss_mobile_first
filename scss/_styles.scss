@@ -42,6 +42,7 @@ main {
   align-items: center;
   height: 37px;
   width: 100%;
+  z-index: 1;
   @include media(">=640px") {
     height: 74px;
   }
@@ -149,9 +150,14 @@ ul.nav {
     background-color: transparent;
     transform: translate(0, 0);
   }
-  li {
+  & > li {
     font-size: 20px;
     padding: 15px 20px;
+    &:hover {
+      & > ul {
+        display: flex;
+      }
+    }
     @include media(">=640px") {
       font-size: 26px;
       padding: 20px 20px;
@@ -165,10 +171,69 @@ ul.nav {
     @include media(">=1024px") {
       font-size: 15px;
       font-weight: 400;
-      padding: 0 27px 0 0;
+      padding: 38px 0 38px 0;
+      margin-right: 27px;
+    }
+    & > ul {
+      position: absolute;
+      top: 94px;
+      left: 156px;
+      width: 148px;
+      flex-direction: column;
+      align-items: center;
+      background-color: $Mandy;
+      padding-top: 10px;
+      display: none;
+      &:after {
+        content: "\e901";
+        position: absolute;
+        top: -10px;
+        left: 63px;
+        font-size: 20px;
+        color: $Mandy;
+      }
+      &:hover {
+        display: block;
+      }
+      li {
+        padding: 10px 0;
+        text-transform: none;
+        font-size: 13px;
+        line-height: 15px;
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+      }
+      a {
+        color: $white;
+      }
+      div ul {
+        position: absolute;
+        top: 78px;
+        left: 158px;
+        background-color: $Mandy;
+        width: 149px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 6px;
+        &:after {
+          content: "\e901";
+          position: absolute;
+          top: 12px;
+          left: -10px;
+          font-size: 20px;
+          color: $Mandy;
+          transform: rotate(270deg);
+        }
+        li {
+          padding-right: 9px;
+          line-height: 10px;
+        }
+      }
     }
   }
-  a {
+  & > li a {
     color: $headerLink;
     text-decoration: none;
     &:hover {
