@@ -197,11 +197,12 @@ ul.nav {
         top: 94px;
       }
       li {
+        position: relative;
         width: 100%;
         text-align: center;
         padding: 10px 0;
         text-transform: none;
-        font-size: 13px;
+        font: 14px/14px "Open Sans", sans-serif;
         line-height: 15px;
         @include media(">=980px") {
           font-weight: 400;
@@ -221,15 +222,15 @@ ul.nav {
       div {
         display: none;
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 144px;
+        top: -3px;
         padding-left: 60px;
-        background-color: #fff;
+        height: 146px;
       }
       div ul {
         position: absolute;
-        top: 78px;
-        left: 158px;
+        top: 0px;
+        left: 15px;
         background-color: $Mandy;
         width: 149px;
         display: flex;
@@ -246,8 +247,9 @@ ul.nav {
           transform: rotate(270deg);
         }
         li {
+          font: 14px/14px "Open Sans", sans-serif;
           padding-right: 9px;
-          line-height: 10px;
+          line-height: 9px;
         }
       }
     }
@@ -333,7 +335,6 @@ ul.nav {
 .text-holder {
   position: relative;
   height: 75px;
-  width: 100%;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -345,6 +346,7 @@ ul.nav {
     height: 234px;
   }
   @include media(">=1024px") {
+    max-width: 1024px;
     height: 245px;
   }
   p {
@@ -403,6 +405,7 @@ ul.nav {
   }
   @include media(">=1024px") {
     height: 294px;
+    max-width: 100%;
   }
   a span {
     display: block;
