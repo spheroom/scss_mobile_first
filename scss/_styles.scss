@@ -11,11 +11,11 @@ body {
 main {
   width: 100%;
   @include media(">=980px") {
-    width: 980px;
+    max-width: 980px;
     margin: auto;
   }
   @include media(">=1024px") {
-    width: 1024px;
+    max-width: 1024px;
   }
 }
 .desktop-hidden {
@@ -48,10 +48,10 @@ main {
   }
   @include media(">=980px") {
     height: 97px;
-    width: 980px;
+    max-width: 980px;
   }
   @include media(">=1024px") {
-    width: 1024px;
+    max-width: 1024px;
   }
 }
 .nav-checkbox {
@@ -449,6 +449,7 @@ ul.nav {
     display: block;
     width: 100%;
     @include media(">=980px") {
+      min-height: 100%;
       width: 33.333%;
       float: left;
     }
